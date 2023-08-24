@@ -95,9 +95,7 @@
     @if $m==m {
       margin-left: calc(var(--bs-gutter-x)/2);
       margin-right: calc(var(--bs-gutter-x)/2);
-    }
-
-    @else {
+    } @else {
 
       padding-left: calc(var(--bs-gutter-x)/2);
       padding-right: calc(var(--bs-gutter-x)/2);

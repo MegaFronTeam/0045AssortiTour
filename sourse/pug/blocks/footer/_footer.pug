@@ -1,9 +1,47 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
+			+e.row.row
+				.col-lg-3.col-xl-4
+					+e.logo(href='/'): +img('img/logo.png')
+					+e.name ООО &laquo;АССОРТИ ТУР&raquo;<br>Действующий член реестра турагентств (реестровый &#8470;&nbsp;7704752289)
+					+soc().d-lg-none
+						+item-sos('vk')
+						+item-sos('instagram')
+					+e.work-time Пн-Пт: 10:00&nbsp;&mdash; 20:00<br>Сб-Вс: выходные
+					+e.policy(href='#') Политика конфиденциальности
+				.col-xl-2.d-none.d-lg-block
+					+e.wrap
+						h4 О НАС
+						ul
+							li: a(href="#") О компании 
+							li: a(href="#") Наши партнёры
+							li: a(href="#") Реквизиты и контакты
+				.col-xl-2.d-none.d-lg-block
+					+e.wrap
+						h4 УСЛУГИ
+						ul
+							li: a(href="#") Горящие туры 
+							li: a(href="#") Туристические услуги
+							li: a(href="#") Другие туры 
+							li: a(href="#") Туры по России 
+							li: a(href="#") Авиабилеты
+							li: a(href="#") Эксклюзивные туры
+							li: a(href="#") Страхование
+							li: a(href="#") Оформление виз
+							li: a(href="#") Бронирование экскурсий
+							li: a(href="#") Трансферы
+				.col-xl-2.d-none.d-lg-block
+					+e.wrap
+						h4 ТУРИСТАМ
+						ul
+							li: a(href="#") Блог
+				.col-auto.ms-auto.d-none.d-lg-block
+					+soc()
+						+item-sos('vk')
+						+item-sos('instagram')
 			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+				.col-lg-7
+					+e.text Внимание! Все материалы и&nbsp;цены, размещенные на&nbsp;сайте, носят справочный характер и&nbsp;не&nbsp;являются публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федераци
+				.col-lg-4.ms-auto
+					+e.text * деятельность организации Meta Platforms Inc, ее&nbsp;продуктов<br>Instagram и&nbsp;Facebook запрещена в&nbsp;Российской Федерации

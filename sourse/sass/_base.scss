@@ -545,3 +545,61 @@ iframe {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.container {
+	@include media-breakpoint-down(md) {
+		--bs-gutter-x: #{rem(32)};
+	}
+}
+
+h1, h2 {
+	font-size: rem(32);
+	@include media-breakpoint-up(md) {
+		font-size: $h1-font-size;
+	}
+}
+
+h4 {
+	font-size: rem(19.2);
+	@include media-breakpoint-up(md) {
+		font-size: $h4-font-size;
+	}
+}
+
+.btn {
+	position: relative;
+	z-index: 1;
+	&-primary,
+	&-secondary {
+		--bs-btn-color: #fff;	
+		--bs-btn-hover-color: #fff;	
+		--bs-btn-active-color: #fff;	
+	}
+	&-primary {
+		--bs-btn-active-bg-color: #0085FF;	
+		--bs-btn-active-border-color: #0085FF;	
+	}
+	&:hover {
+		span {
+			opacity: 1;
+		}
+	}
+	&:focus, &:active {
+		span {
+			opacity: 0;
+		}
+	}
+	span {
+		@include mt;
+		position: absolute;
+		width: calc(100% + 2px);
+		height: calc(100% + 2px);
+		left: -1px;
+		top: -1px;
+		background-image: linear-gradient(137deg, #0085FF 0%, #8DFF65 100%);
+		z-index: -1;
+		border-radius: var(--bs-btn-border-radius);
+		pointer-events: none;
+		opacity: 0;
+	}
+}

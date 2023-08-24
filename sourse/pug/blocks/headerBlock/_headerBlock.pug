@@ -1,11 +1,11 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.section#headerBlock.bg-wrap&attributes(attributes)
+		+e.img-wrap
+			+img('img/sHeaderblock-bg-1.jpg', 'bg').picture-bg
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			h1 Поиск туров по&nbsp;всем операторам
+			+e.wrap
+				+e.head
+				+e.body
 	// end headerBlock

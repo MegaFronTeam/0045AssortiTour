@@ -18,7 +18,7 @@ import npmDist  from 'gulp-npm-dist'
 import rename  from 'gulp-rename'  
 import gulpSass      from 'gulp-sass'
 import sassGlob  from 'gulp-sass-glob'
-import * as dartSass from 'sass';
+import dartSass      from 'sass'
 const  sass          = gulpSass(dartSass)
 import tabify  from 'gulp-tabify' 
 import gcmq  from 'postcss-sort-media-queries'  
