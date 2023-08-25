@@ -62,6 +62,10 @@ function eventHandler() {
 
 	});
 
+	const swiperDefaultSlider = new Swiper('.default-slider-js', { 
+		slidesPerView: 'auto',
+	});
+
 	document.addEventListener('click', (event) => {
 		let subMenuBtntarget = event.target.closest('.menu-item-has-children');
 		if(subMenuBtntarget && window.matchMedia('(max-width: 992px)').matches) {

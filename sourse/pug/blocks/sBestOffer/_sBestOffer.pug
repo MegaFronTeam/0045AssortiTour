@@ -1,0 +1,21 @@
+mixin sBestOffer(data)
+	// start sBestOffer
+	+b.SECTION.sBestOffer.section#sBestOffer&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Лучшие предложения по направлениям
+				p Более 250 направлений по всему миру
+			+e.slider.default-slider-js.swiper
+				.swiper-wrapper
+					mixin slide()
+						+e.slide(href='#').bg-wrap.swiper-slide
+							+img('img/sBestOffer-bg-1.jpg', 'bg').picture-bg
+							p #[span Россия]<br>из Москвы
+							+e.price 12 580 р.
+					+slide()
+					+slide()
+					+slide()
+					+slide()
+					+slide()
+
+	// end sBestOffer

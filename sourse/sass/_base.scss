@@ -640,9 +640,11 @@ h4 {
 			}
 			.sub-menu {
 				a {
-					color: #000;
-					&:hover {
-						color: $secondary;
+					@include media-breakpoint-up(lg) {
+						color: #000;
+						&:hover {
+							color: $secondary;
+						}
 					}
 				}
 			}

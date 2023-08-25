@@ -3,11 +3,15 @@
 	--sPT: #{rem(89)};
 	--sPB: #{rem(25)};
 	min-height: calc(var(--vh, 1vh) * 100);
-	height: rem(680);
+	// height: rem(680);
+	// min-height: rem(680);
 	display: flex;
 	align-items: center;
 	position: relative;
 	z-index: 1;
+	@include media-breakpoint-up(lg) {
+		min-height: rem(680);
+	}
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(100)};
 		--sPB: #{rem(100)};
