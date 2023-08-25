@@ -2,8 +2,8 @@
 .headerBlock {
 	--sPT: #{rem(89)};
 	--sPB: #{rem(25)};
-	height: calc(var(--vh, 1vh) * 100);
-	max-height: rem(680);
+	min-height: calc(var(--vh, 1vh) * 100);
+	height: rem(680);
 	display: flex;
 	align-items: center;
 	position: relative;

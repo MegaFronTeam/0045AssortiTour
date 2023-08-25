@@ -31,7 +31,7 @@ mixin top-nav()
 				.col-auto.me-auto.d-lg-none
 					+menu-toggle()
 				.col-auto
-					+e.logo: +logo()
+					+e.logo(href='/'): +logo()
 				+e.col.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
@@ -39,7 +39,7 @@ mixin top-nav()
 								.col
 									+menu-toggle()
 								.col-auto
-									+e.logo: +logo()
+									+e.logo(href='/'): +logo()
 							+mnu()
 							+soc().d-lg-none
 								+item-sos('vk')

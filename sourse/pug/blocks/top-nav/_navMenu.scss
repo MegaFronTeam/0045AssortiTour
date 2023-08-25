@@ -85,7 +85,7 @@
 	@include media-breakpoint-up(lg) {
 		@include mt;
 		position: absolute;
-		top: 100%;
+		top: calc(100% + 4px);
 		left: 0;
 		background-color: #fff;
 		border-radius: 8px;
