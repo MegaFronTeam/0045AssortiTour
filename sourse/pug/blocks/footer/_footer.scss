@@ -56,8 +56,13 @@
 		h4 {
 			text-transform: uppercase;
 			line-height: 1.2;
-			margin-bottom: rem(36);
-			margin-top: rem(27);
+			margin-bottom: rem(18);
+			font-size: rem(17);
+			@include media-breakpoint-up(lg) {
+				font-size: $h4-font-size;
+				margin-top: rem(27);
+				margin-bottom: rem(36);
+			}
 		}
 		ul {
 			list-style-type: none;

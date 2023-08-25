@@ -2,7 +2,7 @@ mixin footer()
 	+b.FOOTER.footer.section
 		.container
 			+e.row.row
-				.col-lg-3.col-xl-4
+				.col-md-3.col-xl-4
 					+e.logo(href='/'): +img('img/logo.png')
 					+e.name ООО &laquo;АССОРТИ ТУР&raquo;<br>Действующий член реестра турагентств (реестровый &#8470;&nbsp;7704752289)
 					+soc().d-lg-none
@@ -10,14 +10,14 @@ mixin footer()
 						+item-sos('instagram')
 					+e.work-time Пн-Пт: 10:00&nbsp;&mdash; 20:00<br>Сб-Вс: выходные
 					+e.policy(href='#') Политика конфиденциальности
-				.col-xl-2.d-none.d-lg-block
+				.col-auto.col-lg-2.d-none.d-md-block
 					+e.wrap
 						h4 О НАС
 						ul
 							li: a(href="#") О компании 
 							li: a(href="#") Наши партнёры
 							li: a(href="#") Реквизиты и контакты
-				.col-xl-2.d-none.d-lg-block
+				.col-auto.col-lg-2.d-none.d-md-block
 					+e.wrap
 						h4 УСЛУГИ
 						ul
@@ -31,7 +31,7 @@ mixin footer()
 							li: a(href="#") Оформление виз
 							li: a(href="#") Бронирование экскурсий
 							li: a(href="#") Трансферы
-				.col-xl-2.d-none.d-lg-block
+				.col-auto.col-lg-2.d-none.d-md-block
 					+e.wrap
 						h4 ТУРИСТАМ
 						ul

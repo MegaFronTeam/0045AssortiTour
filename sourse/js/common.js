@@ -62,6 +62,13 @@ function eventHandler() {
 
 	});
 
+	document.addEventListener('click', (event) => {
+		let subMenuBtntarget = event.target.closest('.menu-item-has-children');
+		if(subMenuBtntarget && window.matchMedia('(max-width: 992px)').matches) {
+			$('.menu-item-has-children').toggleClass('active');
+			$('.menu-item-has-children .sub-menu').slideToggle();
+		}
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

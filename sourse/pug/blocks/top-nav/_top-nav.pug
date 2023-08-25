@@ -19,15 +19,37 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy.section
 		.container
-			.row
-				.col.order-lg-0.order-last
+			+e.row.row
+				//- .col.order-lg-0.order-last
+				//- 	.menu-mobile.menu-mobile--js
+				//- 		.menu-mobile__inner
+				//- 			+menu-toggle()
+				//- 			+mnu()
+				
+				.col-auto.me-auto.d-lg-none
+					+menu-toggle()
+				.col-auto
+					+e.logo: +logo()
+				+e.col.col-auto.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							+menu-toggle()
+							.row.d-lg-none
+								.col
+									+menu-toggle()
+								.col-auto
+									+e.logo: +logo()
 							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+							+soc().d-lg-none
+								+item-sos('vk')
+								+item-sos('instagram')
+				.col-auto.d-none.d-lg-block
+					+e.tel(href='tel:+74951279752')
+						| +7 495 127 97 52
+						+iconC('whatsapp')
+				.col-auto.d-none.d-lg-block
+					+e.btn.btn.btn-sm.btn-primary(href='#') 
+						| Обратный звонок
+						span 
 	// end top-nav
