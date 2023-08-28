@@ -2,8 +2,97 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
+			+e.mail
+				span E-mail
+				a.h4(href='mailto:office@assorti-tours.ru') office@assorti-tours.ru
 			+e.row.row
+				.col-lg-6
+					+e.wrap 
+						h4 Офис на Староваганьковском
+						p м.Арбатская / м.Библиотека им. Ленина; <br> г.Москва, Староваганьковский пер.19 стр.1
+						.row
+							.col-sm-auto
+								+e.tel(href='tel:+74956264430') +7 (495) 626-44-30
+							.col-auto
+								+e.link(href='#'): +icon('whatsapp')
+							.col-auto
+								+e.link(href='#'): +icon('telegram')
+				.col-lg-6
+					+e.wrap 
+						h4 Офис на Староваганьковском
+						p м.Арбатская / м.Библиотека им. Ленина; <br> г.Москва, Староваганьковский пер.19 стр.1
+						.row
+							.col-sm-auto
+								+e.tel(href='tel:+74951279752') +7 (495) 127-97-52
+							.col-auto
+								+e.link(href='#'): +icon('whatsapp')
+							.col-auto
+								+e.link(href='#'): +icon('telegram')
+				.col-lg-12
+					+e.map
+						#map
+						script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+						script.
+							var myMap;
+
+							ymaps.ready(init);
+
+							function init () {
+								myMap = new ymaps.Map('map', {
+									center:[55.75455492148348,37.604201925903304],
+									zoom: 16
+								}),
+								myPlacemark = new ymaps.Placemark([55.75451861893286,37.61134733071897], {
+								}, {
+									iconLayout: 'default#image',
+									iconImageHref: 'img/map-pin.png',
+									iconImageSize: [70, 76],
+									iconImageOffset: [-35, -38],
+								}),
+								myPlacemark2 = new ymaps.Placemark([55.753677600345135,37.599030626922605], {
+								}, {
+									iconLayout: 'default#image',
+									iconImageHref: 'img/map-pin.png',
+									iconImageSize: [70, 76],
+									iconImageOffset: [-35, -38],
+								});
+								myMap.geoObjects
+									.add(myPlacemark)
+									.add(myPlacemark2)
+								myMap.behaviors.disable('scrollZoom');
+								if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+									// ... отключаем перетаскивание карты
+									myMap.behaviors.disable('drag');
+								};
+							};
+			+e.bottom-row.row
+				.col
+					table
+						mixin tr(key, val)
+							tr
+								td!=key
+								td!=val
+						+tr('Полное наименование', 'Общество с ограниченной ответственностью «Ассорти Тур»')
+						+tr('Почтовый адрес', '119019, Москва, Староваганьковский переулок 19, строение 1')
+						+tr('ИНН/КПП', '7704752289 / 770401001')
+						+tr('Банк', 'ПАО СБЕРБАНК Г.МОСКВА')
+						+tr('БИК', '044525225')
+						+tr('Р/с', '40702810138000094493')
+						+tr('Корр. счет', '30101810400000000225')
+				.col-lg-4.col-xl-3
+					+e.payment-ways
+						h4 Способы оплаты
+						+e.way
+							h6 Наличные
+							p В наших офисах
+						+e.way
+							h6 Безналичный расчет
+							p Через любой банк
+						+e.way
+							h6 Банковские карты
+							p В наших офисах
+						.row
+							.col-auto: +img('img/mir.png')
+							.col-auto: +img('img/svg/mastercard.svg')
+							.col-auto: +img('img/svg/visa.svg')
 	// end sContact

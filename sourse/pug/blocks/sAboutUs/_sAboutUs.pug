@@ -1,0 +1,27 @@
+mixin sAboutUs(data)
+	// start sAboutUs
+	+b.SECTION.sAboutUs.section#sAboutUs&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 О нас
+				p Отдых на&nbsp;любой вкус и&nbsp;настроение
+			+e.row.row
+				.col
+					p Значимость этих проблем настолько очевидна, что консультация с&nbsp;широким активом влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации поставленных обществом задач. Прежде всего, внедрение современных методик влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации существующих финансовых и&nbsp;административных условий. 
+					p Картельные сговоры не&nbsp;допускают ситуации, при которой акционеры крупнейших компаний будут обнародованы! Задача организации, в&nbsp;особенности&nbsp;же дальнейшее развитие различных форм деятельности в&nbsp;значительной степени обусловливает важность как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений.
+					p С&nbsp;другой стороны, новая модель организационной деятельности прекрасно подходит для реализации дальнейших направлений развития.
+				.col-lg-5
+					+e.img-wrap
+						+img('img/sAboutUs-img-1.png')(data-fancybox='sertificates' data-src='img/sAboutUs-img-1-lg.png').res-i
+						div(data-fancybox='sertificates' data-src='img/sAboutUs-img-2-lg.png')
+			+e.bottom-row.row
+				mixin item(img, text)
+					.col-6.col-lg-3
+						+e.item
+							+img(`img/svg/${img}`)
+							span!= text
+				+item('sAboutUs-icon-1.svg', 'На рынке туристических услуг с 2010 года')
+				+item('sAboutUs-icon-2.svg', 'Действующий член реестра турагентств')
+				+item('sAboutUs-icon-3.svg', 'Клиентская<br>поддержка 24/7')
+				+item('sAboutUs-icon-4.svg', 'Оформление тура<br>за 20 минут')
+	// end sAboutUs

@@ -14,7 +14,7 @@
 		margin-bottom: rem(35);
 		border-bottom: 1px solid $gray-100;
 		@include media-breakpoint-up(lg) {
-			padding-bottom: rem(46);
+			padding-bottom: rem(40.600);
 			margin-bottom: rem(33);
 		}
 	}
@@ -42,7 +42,7 @@
 		line-height: 1.4;
 		margin-bottom: rem(33);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(48);
+			margin-bottom: rem(42.600);
 		}
 	}
 	&__policy {
@@ -61,13 +61,17 @@
 			@include media-breakpoint-up(lg) {
 				font-size: $h4-font-size;
 				margin-top: rem(27);
-				margin-bottom: rem(36);
+				margin-bottom: rem(30.600);
 			}
 		}
 		ul {
 			list-style-type: none;
-
+			margin-bottom: 0;
 			li {
+				margin-bottom: rem(3);
+				&:last-child {
+					margin-bottom: 0;
+				}
 				a {
 					font-size: rem(14);
 					line-height: 1.4;
@@ -80,12 +84,15 @@
 		line-height: 1.4;
 		opacity: 0.5;
 		font-variant-numeric: lining-nums proportional-nums;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(35);
+		}
 	}
 	.soc {
 		--bs-gutter-x: #{rem(40)};
 		margin-bottom: rem(33);
 		@include media-breakpoint-up(lg) {
-			margin-top: rem(27);
+			margin-top: rem(30.600);
 			margin-bottom: 0;
 		}
 		.icon {

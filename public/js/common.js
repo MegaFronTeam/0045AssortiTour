@@ -62,9 +62,16 @@ function eventHandler() {
 
 	});
 
-	const swiperDefaultSlider = new Swiper('.default-slider-js', { 
-		slidesPerView: 'auto',
-	});
+	let defaultSliders = document.querySelectorAll('.default-slider-js');
+	for (const defaultSlider of defaultSliders) {
+		new Swiper(defaultSlider, { 
+			slidesPerView: 'auto',
+			navigation: {
+				nextEl: defaultSlider.querySelector('.swiper-button-next'),
+				prevEl: defaultSlider.querySelector('.swiper-button-prev'),
+			},
+		});
+	}
 
 	document.addEventListener('click', (event) => {
 		let subMenuBtntarget = event.target.closest('.menu-item-has-children');

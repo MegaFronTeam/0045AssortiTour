@@ -1,0 +1,13 @@
+mixin sExample(data)
+	// start sExample
+	+b.SECTION.sExample.section#sExample&attributes(attributes)
+		.container
+			+b.section-title
+				h2 фото-примеры свадеб в разных странах
+			+e.slider.default-slider-js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide.bg-wrap(data-fancybox='sExampleGallery' data-src='img/sExample-img-1.jpg'): +img('img/sExample-img-1.jpg', 'bg').picture-bg
+					+e.slide.swiper-slide.bg-wrap(data-fancybox='sExampleGallery' data-src='img/sExample-img-2.jpg'): +img('img/sExample-img-2.jpg', 'bg').picture-bg
+					+e.slide.swiper-slide.bg-wrap(data-fancybox='sExampleGallery' data-src='img/sExample-img-3.jpg'): +img('img/sExample-img-3.jpg', 'bg').picture-bg
+					+e.slide.swiper-slide.bg-wrap(data-fancybox='sExampleGallery' data-src='img/sExample-img-4.jpg'): +img('img/sExample-img-4.jpg', 'bg').picture-bg
+	// end sExample

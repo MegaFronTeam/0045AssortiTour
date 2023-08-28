@@ -7,3 +7,33 @@ mixin headerBlock()
 			h1 Поиск туров по&nbsp;всем операторам
 			.tv-search-form.tv-moduleid-9961661
 	// end headerBlock
+
+mixin headerBlock2()
+	// start headerBlock
+	+b.headerBlock--2.section#headerBlock.bg-wrap&attributes(attributes)
+		+e.img-wrap
+			+img('img/sHeaderblock-bg-2.jpg', 'bg').picture-bg
+		.container
+			h1 Свадебные туры
+			+form-wrap
+				h4 Оставьте свой номер телефона для консультации и подбора
+				.row
+					.col-lg
+						+input('Введите', 'text', 'Ваше имя')
+					.col-lg
+						+input('Введите', 'text', 'Номер телефона')
+					.col-lg-auto
+						+e.btn.btn.btn-primary(type='submit') Отправить
+					.col-12
+						+policy
+	// end headerBlock
+
+mixin headerBlock3()
+	// start headerBlock
+	+b.headerBlock--3.section#headerBlock.bg-wrap&attributes(attributes)
+		+e.img-wrap
+			+img('img/sHeaderblock-bg-3.jpg', 'bg').picture-bg
+		.container.text-center
+			h1 Туры по всей России
+			h4 Узнай свою страну поближе
+	// end headerBlock

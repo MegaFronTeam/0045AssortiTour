@@ -1,0 +1,32 @@
+mixin sSliderBlock(data)
+	// start sSliderBlock
+	+b.SECTION.sSliderBlock.section#sSliderBlock&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg
+					+e.slider.swiper.default-slider-js
+						+e.content
+							.row
+								.col
+									p Офис на Староваганьковском
+								.col-auto.d-none.d-lg-block
+									+e.arrow-wrap
+										+arrow
+						.swiper-wrapper
+							+e.slide.swiper-slide.bg-wrap: +img('img/sSliderBlock-img-1.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sSliderBlock-img-1.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sSliderBlock-img-1.jpg', 'bg').picture-bg
+				.col-lg
+					+e.slider.swiper.default-slider-js
+						+e.content
+							.row
+								.col
+									p Офис на Маршала Тухачевского
+								.col-auto.d-none.d-lg-block
+									+e.arrow-wrap
+										+arrow
+						.swiper-wrapper
+							+e.slide.swiper-slide.bg-wrap: +img('img/sSliderBlock-img-1.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sSliderBlock-img-1.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sSliderBlock-img-1.jpg', 'bg').picture-bg
+	// end sSliderBlock

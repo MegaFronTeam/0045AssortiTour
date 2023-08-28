@@ -1,0 +1,21 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши партнеры
+				p Мы сотрудничаем с лучшими туроператорами в России
+			mixin item(img, text)
+				+e.item
+					img(src=`img/${img}` alt='')
+					p на рынке с 1995 года
+			+e.slider.default-slider-js.swiper
+				.swiper-wrapper
+					mixin slide(i)
+						+e.slide.swiper-slide
+							+e.item 
+								+e.img-wrap: .img-wrap-center: +img(`img/sPartners-img-${i}.png`)
+								p на рынке с 1995 года
+					-for(let i = 1; i <= 12; i++)
+						+slide(i)
+	// end sPartners

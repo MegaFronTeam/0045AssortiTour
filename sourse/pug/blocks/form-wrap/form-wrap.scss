@@ -1,20 +1,73 @@
 .form-wrap {
 	&__input-wrap {
+		position: relative;
 		// @extend .form-group;
-		margin-bottom: rem(15);
 	}
+	&__input-title {
+		position: absolute;
+		top: rem(14);
+		left: rem(12);
+		text-transform: uppercase;
+		font-size: rem(12);
+		color: $gray-600;
+		line-height: 0.875;
+		font-family: $font-family-monospace;
+	}	
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;
-		resize: none;
+		border-right: $input-border-width solid $input-border-color;
+		border: none;
+		padding-top: rem(30);
+		padding-bottom: rem(12);
 	}
 	&__btn {
 		cursor: pointer;
-		margin-bottom: rem(15);
+		// margin-bottom: rem(15);
 	}
 	label {
 		width: 100%;
 		display: block;
+	}
+	textarea {
+		min-height: rem(187);
+		resize: none;
+		@include media-breakpoint-up(md) {
+			min-height: rem(114);
+		}
+	}
+	&__policy {
+		max-width: rem(410);
+		font-size: rem(12);
+		line-height: 1.4;
+		opacity: .5;
+		a {
+			color: currentColor;
+			border-bottom: 1px solid currentColor;
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
+		.custom-input {
+			margin-bottom: 0;
+			padding-left: rem(27);
+			// color: rgba($color: #000000, $alpha: .5);
+			&__input {
+				--bs-form-check-bg: transparent;
+				width: rem(17);
+				height: rem(17);
+				border: 1px solid rgba($color: #000000, $alpha: .5);
+				margin-left: rem(-27);
+				// --bs-form-check-bg-image: ;
+				&:checked[type=checkbox] {
+					--bs-form-check-bg-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath d='M3.99902 7.62718L7.66586 12.3333L15.9996 2.99951' stroke='black' stroke-width='1.33334' stroke-linecap='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.3521 0.422468C15.1333 0.364425 14.9035 0.333496 14.6665 0.333496H2.66667C1.19391 0.333496 0 1.52741 0 3.00017V15C0 16.4727 1.19391 17.6666 2.66667 17.6666H14.6665C16.1392 17.6666 17.3331 16.4727 17.3331 15V5.07413L15.9998 6.61777V15C15.9998 15.7363 15.4028 16.3333 14.6665 16.3333H2.66667C1.93029 16.3333 1.33334 15.7363 1.33334 15V3.00017C1.33334 2.26379 1.93029 1.66683 2.66667 1.66683H14.2773L15.3521 0.422468Z' fill='black'/%3E%3C/g%3E%3C/svg%3E%0A");
+					border: none;
+				}
+				&:focus {
+					box-shadow: none;
+				}
+			}
+		}
 	}
 }
 

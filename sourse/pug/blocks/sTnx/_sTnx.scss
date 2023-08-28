@@ -1,0 +1,38 @@
+// start .sTnx
+.sTnx {
+	--sPT: #{rem(27)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	text-align: center;
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(99)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	img {
+		margin-bottom: rem(17);
+	}
+	h1 {
+		color: $primary;
+		margin-bottom: rem(19);
+	}
+	p {
+		max-width: rem(312);
+		color: $gray-600;
+		line-height: 1.4;
+		margin-bottom: rem(19);
+		font-size: rem(14);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sTnx

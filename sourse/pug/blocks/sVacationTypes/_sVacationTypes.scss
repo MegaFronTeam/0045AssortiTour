@@ -1,0 +1,51 @@
+// start .sVacationTypes
+.sVacationTypes {
+	// --sPT: #{rem()};
+	--sPB: #{rem(72)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(66)};
+		--sPB: #{rem(80)};
+	}
+	&__row{
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(24)};
+
+	}
+	&__item{
+		overflow: hidden;
+		border-radius: 16px;
+		background-color: var(--bgColor);
+		display: flex;
+		flex-direction: column;
+		min-height: rem(164);
+		position: relative;
+		z-index: 1;
+		padding: rem(24);
+		@include media-breakpoint-up(md) {
+			min-height: rem(219);
+		}
+		h6 {
+			margin-bottom: 0;
+			line-height: 1.2;
+			@include media-breakpoint-up(md) {
+				margin-top: auto;
+			}
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			z-index: -1;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sVacationTypes

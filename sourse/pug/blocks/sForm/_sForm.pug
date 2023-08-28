@@ -1,16 +1,125 @@
-mixin sForm()
+mixin sForm(title='Поймай лучшее предложение', picture2)
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+			+e.wrap
+				if picture2
+					picture 
+						source(media="(min-width: 998px)", srcset="img/sForm-bg-2.png")
+						img(src="img/sForm-bg-1-sm.png", alt="").bg-2
+				else
+					picture 
+						source(media="(min-width: 998px)", srcset="img/sForm-bg-1.png")
+						img(src="img/sForm-bg-1-sm.png", alt="").bg
+				+b.section-title
+					h2!=title
+					p Оставьте номер телефона. Менеджер перезвонит вам, проконсультирует и&nbsp;предложит самое выгодное предложение
+				+form-wrap
+					+e.row
+						.row
+							.col-lg-6
+								+input("Введите",'text', 'Ваше имя')
+							.col-lg-6
+								+input("+7 (___) ___ - __ - __",'tel', 'Номер телефона')
+							.col-lg-auto
+								+e.btn.btn.btn-secondary(type="submit") 
+									| Получить предложение
+									span
+							.col-lg-auto
+								+policy
+	// end sForm
+
+mixin sForm2(contacts=true, map=true, form=true)
+	// start sForm
+	+b.SECTION.sForm--2.section#sForm&attributes(attributes)
+		.container
+			+e.wrap(class=(contacts ? '' : 'rounded'))
+				img(src='img/svg/sForm-bg.svg' alt='').bg-img
+				if form
+					+b.section-title
+						h2 Остались вопросы?
+						p Оставьте свои контактные данные. Менеджер перезвонит вам, проконсультирует и&nbsp;предложит самое выгодное предложение
+					+form-wrap
+						+e.row
+							.row
+								.col-lg-4
+									+input("Введите",'text', 'Ваше имя')
+								.col-lg-4
+									+input("Введите",'tel', 'Номер телефона')
+								.col-lg-4
+									+input("Введите",'email', 'Ваш e-mail')
+								.col-12
+									+input("Введите",'textarea', 'Ваше сообщение')
+								.col-lg-auto
+									+e.btn.btn.btn-primary(type="submit") 
+										| Отправить
+										span
+								.col-lg-auto
+									+policy
+				if contacts
+					+e.contacts(class=(form ? '' : 'mt-0' ))
+						h2 Контакты
+						+e.contact-row.row
+							.col-md
+								+e.content 
+									h4 Офис на Маршала Тухачевского
+									p м.Арбатская / м.Библиотека им. Ленина;<br>г.Москва, Староваганьковский пер.19 стр.1
+									.row
+										.col-auto
+											+e.tel(href='tel:+74956264430') +7 (495) 626-44-30
+										.col-auto
+											+e.link(href='#'): +icon('whatsapp')
+										.col-auto
+											+e.link(href='#'): +icon('telegram')
+							.col-md
+								+e.content 
+									h4 Офис на Староваганьковском
+									p м.Арбатская&nbsp;/ м.Библиотека им. Ленина;<br>г.Москва, Староваганьковский пер.19 стр.1
+									.row
+										.col-auto
+											+e.tel(href='tel:+74951279752') +7 (495) 127-97-52
+										.col-auto
+											+e.link(href='#'): +icon('whatsapp')
+										.col-auto
+											+e.link(href='#'): +icon('telegram')
+							.col-md-12
+								+e.email
+									span E-mail
+									a(href="mailto:office@assorti-tours.ru") office@assorti-tours.ru
+			if map
+				+e.map
+					#map
+					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+					script.
+						var myMap;
+
+						ymaps.ready(init);
+
+						function init () {
+							myMap = new ymaps.Map('map', {
+								center:[55.75455492148348,37.604201925903304],
+								zoom: 16
+							}),
+							myPlacemark = new ymaps.Placemark([55.75451861893286,37.61134733071897], {
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/map-pin.png',
+								iconImageSize: [70, 76],
+								iconImageOffset: [-35, -38],
+							});
+							myPlacemark2 = new ymaps.Placemark([55.753677600345135,37.599030626922605], {
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/map-pin.png',
+								iconImageSize: [70, 76],
+								iconImageOffset: [-35, -38],
+							});
+							myMap.geoObjects
+								.add(myPlacemark)
+							myMap.behaviors.disable('scrollZoom');
+							if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+								// ... отключаем перетаскивание карты
+								myMap.behaviors.disable('drag');
+							};
+						};
 	// end sForm

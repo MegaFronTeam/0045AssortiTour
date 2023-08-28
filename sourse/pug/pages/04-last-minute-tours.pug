@@ -1,0 +1,39 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '03-privacy-policy.jpg'
+
+block title
+	- let  title= 'Горящие туры от всех туроператоров'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Горящие туры от всех туроператоров', 'Горящие туры')
+		//-  add module
+		section.features.section
+			.container
+				h2 Особенности горящих туров
+				p Свадебные церемонии проводятся официальным лицом выбранной страны в&nbsp;местном муниципалитете или за&nbsp;его пределами (если это позволяется). Свидетельство о&nbsp;браке выдается компетентными органами иностранного государства. Данное свидетельство нельзя обменять на&nbsp;свидетельство российского образца. При желании его можно легализовать для Российской Федерации. После получения свидетельства новобрачным следует обратиться в&nbsp;паспортный стол по&nbsp;месту прописки для проставления печати о&nbsp;замужестве в&nbsp;Российский паспорт и&nbsp;смены фамилии.
+		+sForm.pb-0 
+		+sForm2(true, true, false)
+	+parts('footer')
+      
+
+
+

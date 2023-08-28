@@ -1,0 +1,25 @@
+mixin sHowWeWork(data)
+	// start sHowWeWork
+	+b.SECTION.sHowWeWork.section#sHowWeWork&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как мы работаем
+				p Все хлопоты по вашему отдыху мы берем на себя
+			+e.slider.swiper.default-slider-js
+				+img('img/svg/line.svg').line
+				.swiper-wrapper
+					mixin slide(img, title, text)
+						+e.slide.swiper-slide
+							+e.icon-wrap
+								+img(`img/svg/${img}`)
+							h6!= title
+							p!= text
+					+slide('sHowWeWork-icon-1.svg', 'Заявка', 'Оформление заявки по&nbsp;телефону<br>или онлайн на&nbsp;сайте')
+					+slide('sHowWeWork-icon-2.svg', 'Подбор тура', 'Информационно-консультативная<br>поддержка')
+					+slide('sHowWeWork-icon-3.svg', 'Заключение договора', 'Оформляем договор в&nbsp;электронном виде дистанционно или в&nbsp;любом из&nbsp;наших офисов')
+					+slide('sHowWeWork-icon-4.svg', 'Оплата', 'Безналичный и&nbsp;наличный<br>методы оплаты')
+					+slide('sHowWeWork-icon-5.svg', 'Путешествию за новыми впечатлениями', 'Безналичный и&nbsp;наличный<br>методы оплаты')
+					+slide('sHowWeWork-icon-6.svg', 'Вручение документов<br>клиенту', 'Оформляем договор в&nbsp;электронном виде<br>дистанционно или в&nbsp;любом из&nbsp;наших офисов')
+					+slide('sHowWeWork-icon-7.svg', 'Оформление<br>документов', 'Информационно-консультативная<br>поддержка')
+					+slide('sHowWeWork-icon-8.svg', 'Бронирование', 'Оформление заявки по&nbsp;телефону<br>или онлайн на&nbsp;сайте')
+	// end sHowWeWork

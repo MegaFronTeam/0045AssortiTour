@@ -9,10 +9,16 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 
 include ../blocks/sBestOffer/_sBestOffer.pug
+include ../blocks/sVacationTypes/_sVacationTypes.pug
+include ../blocks/sKit/_sKit.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sAboutUs/_sAboutUs.pug
+include ../blocks/sSliderBlock/_sSliderBlock.pug
+include ../blocks/sHowWeWork/_sHowWeWork.pug
 
 block variables
 	- let  mainPage= 'haeder-with-bg main-page' 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
 	- let  title= 'Главная'
@@ -25,6 +31,14 @@ block pagecontent
 	main
 		+headerBlock 
 		+sBestOffer
+		+sForm
+		+sVacationTypes
+		+sKit
+		+sPartners
+		+sAboutUs
+		+sSliderBlock()
+		+sHowWeWork
+		+sForm2
 	+parts('footer')
       
 

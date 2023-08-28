@@ -1,0 +1,17 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col
+					+e.num
+						+img('img/svg/404-img.svg')
+						| 4#[span 0]4 
+				.col-lg-4
+					+e.wrap
+						h1.h4 Ничего не найдено
+						p Что то пошло не так перейдите на главную или вернитесь назад
+						+e.btn.btn.btn-primary.btn-sm(href='/') 
+							| Вернуться на главную
+							span
+	// end s404

@@ -1,0 +1,55 @@
+mixin sVacationTypes(data)
+	// start sVacationTypes
+	+b.SECTION.sVacationTypes.section#sVacationTypes&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Работаем с разными типами отдыха
+				p Отдых на любой вкус и настроение
+			mixin item(data)
+				div(class=(data.colClass ? data.colClass : 'col-sm-6 col-md-4 col-xl-3'))
+					+e.item(style=`--bgColor: ${data.bgColor}` href='#')
+						img(src=`img/${data.img}` alt='')
+						h6!= data.title
+
+			+e.row.row
+				+item({
+					bgColor: '#EEE',
+					img: 'sVacationTypes-img-1.png',
+					title: 'Эксклюзивные<br>путешествия'
+				})
+				+item({
+					bgColor: '#D8FFCA',
+					img: 'sVacationTypes-img-2.png',
+					title: 'Пляжный<br>отдых'
+				})
+				+item({
+					bgColor: '#ECF2F8',
+					img: 'sVacationTypes-img-3.png',
+					title: 'Лечебно-<br>оздоровительные туры'
+				})
+				+item({
+					bgColor: '#E4F8DD',
+					img: 'sVacationTypes-img-4.png',
+					title: 'Круизы'
+				})
+				+item({
+					bgColor: '#CAFFB7',
+					img: 'sVacationTypes-img-5.png',
+					title: 'Экскурсионные<br>туры'
+				})
+				+item({
+					bgColor: '#EFF7FF',
+					img: 'sVacationTypes-img-6.png',
+					title: 'Горнолыжные<br>туры'
+				})
+				+item({
+					bgColor: '#EBFFE4',
+					img: 'sVacationTypes-img-7.png',
+					title: 'Шоп-туры'
+				})
+				+item({
+					bgColor: '#D6EBFF',
+					img: 'sVacationTypes-img-8.png',
+					title: 'Дайвинг-туры'
+				})
+	// end sVacationTypes

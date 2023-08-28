@@ -9,9 +9,11 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 
+include ../blocks/sPrivicyPolicy/_sPrivicyPolicy.pug
+
 block variables
 	- let  mainPage= '' 
-	- let  bg= null
+	- let  bg= '03-privacy-policy.jpg'
 
 block title
 	- let  title= 'Политика конфиденциальности'
@@ -22,8 +24,9 @@ block pagecontent
 	
 	+parts('header')
 	main
-		//- +headerBlock 
-		
+		+page-head('Политика конфиденциальности', 'Типы туров', 'Политика конфиденциальности')
+		+sPrivicyPolicy
+		+sForm2
 	+parts('footer')
       
 
