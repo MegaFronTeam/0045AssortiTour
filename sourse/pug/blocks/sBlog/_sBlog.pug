@@ -1,6 +1,6 @@
 mixin sBlog(btn)
 	// start sBlog
-	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+	+b.SECTION.sBlog.section&attributes(attributes)
 		mixin card(img, title, date, text, tags=['Лучшие отели'])
 			+e.card(href='#')&attributes(attributes)
 				+e.img-wrap: .img-wrap-center: +img(`img/${img}`, 'bg')

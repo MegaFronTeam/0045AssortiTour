@@ -4,7 +4,7 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(md) {
-		--sPT: #{rem(60)};
+		--sPT: #{rem(56.400)};
 	}
 	&__slider {
 		overflow: visible;

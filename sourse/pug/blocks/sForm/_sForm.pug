@@ -1,6 +1,6 @@
 mixin sForm(title='Поймай лучшее предложение', picture2)
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.SECTION.sForm.section&attributes(attributes)
 		.container
 			+e.wrap
 				if picture2
@@ -31,7 +31,7 @@ mixin sForm(title='Поймай лучшее предложение', picture2)
 
 mixin sForm2(contacts=true, map=true, form=true)
 	// start sForm
-	+b.SECTION.sForm--2.section#sForm&attributes(attributes)
+	+b.SECTION.sForm--2.section&attributes(attributes)
 		.container
 			+e.wrap(class=(contacts ? '' : 'rounded'))
 				img(src='img/svg/sForm-bg.svg' alt='').bg-img
