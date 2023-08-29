@@ -6,7 +6,7 @@
 1. <https://megafronteam.github.io/0045AssortiTour/public/04-last-minute-tours.html>
 1. <https://megafronteam.github.io/0045AssortiTour/public/05-tours.html>
 1. <https://megafronteam.github.io/0045AssortiTour/public/06-blog.html>
-1. 
+1. <https://megafronteam.github.io/0045AssortiTour/public/07-article.html>
 1. <https://megafronteam.github.io/0045AssortiTour/public/08-our-partners.html>
 1. 
 1. <https://megafronteam.github.io/0045AssortiTour/public/10-contacts.html>

@@ -1,0 +1,81 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sWhy/_sWhy.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '03-privacy-policy.jpg'
+
+block title
+	- let  title= 'Блог'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('', 'Блог')
+		+sContent
+			+e.head-row
+				.row 
+					.col-lg-6 
+						+e.go-back(href='#')
+							+icon('arrow-left')
+							| Назад
+						+tags(['Лучшие отели', 'Лучшие отели', 'Лучшие отели'])
+						h1 7 курортов для отдыха с детьми в горах
+						+e.date 17 апреля 2023
+						h6 Лучший семейный отдых&nbsp;&mdash; это отдых на&nbsp;море. Красное, Средиземное или Черное&nbsp;&mdash; большого значения не&nbsp;имеет. Главное, попасть на&nbsp;него в&nbsp;сезон и&nbsp;не&nbsp;прогадать с&nbsp;выбором курорта. Потому что отдых с&nbsp;детьми&nbsp;&mdash; дело тонкое, здесь
+					.col-lg-6
+						+img('img/sContent-img-1.jpg').res-i
+			+e.wrap
+				p.mb-40 Лучший семейный отдых&nbsp;&mdash; это отдых на&nbsp;море. Красное, Средиземное или Черное&nbsp;&mdash; большого значения не&nbsp;имеет. Главное, попасть на&nbsp;него в&nbsp;сезон и&nbsp;не&nbsp;прогадать с&nbsp;выбором курорта. Потому что отдых с&nbsp;детьми&nbsp;&mdash; дело тонкое, здесь важно все&nbsp;&mdash; от&nbsp;общего контингента отдыхающих до&nbsp;пляжей и&nbsp;отелей. Не&nbsp;знаете, что выбрать, выбирайте любой из&nbsp;этих семи курортов&nbsp;&mdash; дети будут в&nbsp;восторге!
+				h4 Правила установки навесов зимой
+				p Для монтажа опор под навесы зимой часто используют метод бутования. При этом способе на&nbsp;дно лунки укладывают песок, ставят опору, сверху засыпают смесь грунта и&nbsp;щебня (керамзита, гравия) фракционностью 5&ndash;20&nbsp;см. Каждый слой тщательно утрамбовывают и&nbsp;заливают водой. В&nbsp;результате получается прочное, плотное основание, которое не&nbsp;накапливает воду&nbsp;&mdash; при использовании щебня расширение идет по&nbsp;промежуткам между камнями, не&nbsp;затрагивая столб. Предварительно участок под навес освобождают от&nbsp;снега.
+				ul
+					li Для монтажа опор под навесы зимой часто используют метод бутования.
+					li При этом способе на&nbsp;дно лунки укладывают песок, ставят опору, сверху засыпают смесь грунта и&nbsp;щебня 
+					li (керамзита, гравия) фракционностью 5&ndash;20&nbsp;см. Каждый слой тщательно утрамбовывают и&nbsp;заливают водой. 
+					li В&nbsp;результате получается прочное, плотное основание, которое не&nbsp;накапливает 
+					li воду&nbsp;&mdash; при использовании щебня расширение идет по&nbsp;промежуткам между камнями, не&nbsp;затрагивая столб. 
+					li Предварительно участок под навес освобождают от&nbsp;снега.
+				+img('img/sConent-img-2.jpg').res-i
+				h4 Правила установки навесов зимой
+				p Для монтажа опор под навесы зимой часто используют метод бутования. При этом способе на&nbsp;дно лунки укладывают песок, ставят опору, сверху засыпают смесь грунта и&nbsp;щебня (керамзита, гравия) фракционностью 5&ndash;20&nbsp;см. Каждый слой тщательно утрамбовывают и&nbsp;заливают водой. В&nbsp;результате получается прочное, плотное основание, которое не&nbsp;накапливает воду&nbsp;&mdash; при использовании щебня расширение идет по&nbsp;промежуткам между камнями, не&nbsp;затрагивая столб. Предварительно участок под навес освобождают от&nbsp;снега.
+				h4.mb-40 Наименование галерии в блоге
+				+e.slider.swiper.default-slider-js
+					.swiper-wrapper
+						+e.slide.swiper-slide.bg-wrap: +img('img/sExample-img-1.jpg', 'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap: +img('img/sExample-img-2.jpg', 'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap: +img('img/sExample-img-3.jpg', 'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap: +img('img/sExample-img-4.jpg', 'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap: +img('img/sExample-img-1.jpg', 'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap: +img('img/sExample-img-2.jpg', 'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap: +img('img/sExample-img-3.jpg', 'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap: +img('img/sExample-img-4.jpg', 'bg').picture-bg
+		+sBlog
+			h2 Другие статьи из блога
+			+e.row.row
+				.col-lg-4
+					+card('sBlog-img-1.jpg', 'Топ-10 самых бронируемых отелей Турции с отзывами туристов', '17 апреля 2023')
+				.col-lg-4
+					+card('sBlog-img-1.jpg', 'Топ-10 самых бронируемых отелей Турции с отзывами туристов', '17 апреля 2023')
+				.col-lg-4
+					+card('sBlog-img-1.jpg', 'Топ-10 самых бронируемых отелей Турции с отзывами туристов', '17 апреля 2023')
+		+sForm2()
+	+parts('footer')
+      
+
+
+

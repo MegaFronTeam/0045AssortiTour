@@ -7,6 +7,9 @@
 		--bs-gutter-x: #{rem(24)};
 		--bs-gutter-y: #{rem(24)};
 	}
+	h2 {
+		margin-bottom: rem(40);
+	}
 	.tags {
 		margin-bottom: rem(40);
 		&__tag {
