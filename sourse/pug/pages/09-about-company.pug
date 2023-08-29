@@ -1,0 +1,39 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+include ../blocks/sAboutHead/_sAboutHead.pug
+include ../blocks/sOurBenefits/_sOurBenefits.pug
+include ../blocks/sEmployees/_sEmployees.pug
+include ../blocks/sOffices/_sOffices.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '09-our-partners.jpg'
+
+block title
+	- let  title= 'О компании'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('О компании', 'О компании')
+		+sAboutHead
+		+sOurBenefits
+		+sEmployees
+		+sOffices
+		+sForm2()
+	+parts('footer')
+      
+
+
+

@@ -8,7 +8,7 @@
 1. <https://megafronteam.github.io/0045AssortiTour/public/06-blog.html>
 1. <https://megafronteam.github.io/0045AssortiTour/public/07-article.html>
 1. <https://megafronteam.github.io/0045AssortiTour/public/08-our-partners.html>
-1. 
+1. <https://megafronteam.github.io/0045AssortiTour/public/09-about-company.html>
 1. <https://megafronteam.github.io/0045AssortiTour/public/10-contacts.html>
 1. <https://megafronteam.github.io/0045AssortiTour/public/11-404.html>
 1. <https://megafronteam.github.io/0045AssortiTour/public/12-thanks.html>

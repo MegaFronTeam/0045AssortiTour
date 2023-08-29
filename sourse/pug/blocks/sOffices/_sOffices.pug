@@ -1,0 +1,30 @@
+mixin sOffices(data)
+	// start sOffices
+	+b.SECTION.sOffices.section#sOffices&attributes(attributes)
+		.container
+			+b.section-title
+				h4 Офисы
+			.tabs
+				.tabs__caption.swiper.default-slider-js
+					.swiper-wrapper
+						.tabs__btn.swiper-slide.active Офис на Маршала Тухачевского
+						.tabs__btn.swiper-slide Офис на Староваганьковском
+				.tabs__content.active
+					+e.slider.swiper.default-slider-js
+						.swiper-wrapper
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-1.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-2.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-3.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-1.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-2.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-3.jpg', 'bg').picture-bg
+				.tabs__content
+					+e.slider.swiper.default-slider-js
+						.swiper-wrapper
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-1.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-2.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-3.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-1.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-2.jpg', 'bg').picture-bg
+							+e.slide.swiper-slide.bg-wrap: +img('img/sOffices-img-3.jpg', 'bg').picture-bg
+	// end sOffices

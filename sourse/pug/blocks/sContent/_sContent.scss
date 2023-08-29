@@ -119,8 +119,10 @@
 		overflow: visible;
 		margin-right: rem(-24);
 		padding-bottom: rem(48);
-		margin-bottom: rem(47);
 		// border-bottom: 1px solid $gray-100;
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(47);
+		}
 		&:after {
 			content: '';
 			position: absolute;
@@ -134,7 +136,7 @@
 		}
 	}
 	&__slide {
-		width: calc(100%);
+		width: calc(100% - rem(24));
 		margin-right: rem(24);
 		min-height: rem(296);
 		@include media-breakpoint-up(md) {

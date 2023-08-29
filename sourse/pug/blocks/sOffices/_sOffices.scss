@@ -1,0 +1,60 @@
+// start .sOffices
+.sOffices {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.tabs {
+		&__caption {
+			display: flex;
+			align-items: center;
+			margin-bottom: rem(40);
+		}
+		&__btn {
+			@include mt;
+			font-size: rem(16);
+			line-height: 1.4;
+			color: $gray-600;
+			padding-bottom: rem(8);
+			border-bottom: 1px solid transparent;
+			font-weight: 600;
+			width: auto;
+			margin-right: rem(40);
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover, &.active {
+				border-bottom-color: $secondary;
+				color: #000;
+			}
+		}
+	}
+	&__slider {
+		margin-right: rem(-40);
+		overflow: visible;
+	}
+	&__slide {
+		width: calc(100% - rem(40));
+		margin-right: rem(40);
+		min-height: rem(296);
+		border-radius: 16px;
+		overflow: hidden;
+		@include media-breakpoint-up(md) {
+			width: calc(100% / 2 - rem(40));
+		}
+		@include media-breakpoint-up(xl) {
+			width: calc(100% / 3 - rem(40));
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOffices
