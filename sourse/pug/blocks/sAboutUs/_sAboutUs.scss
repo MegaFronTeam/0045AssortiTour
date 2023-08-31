@@ -32,6 +32,9 @@
 	&__img-wrap {
 		display: flex;
 		align-items: center;
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-end;
+		}
 		img {
 			cursor: pointer;
 		}

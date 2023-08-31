@@ -11,6 +11,7 @@ include ../blocks/sCatalog/_sCatalog.pug
 
 include ../blocks/sMostPopular/_sMostPopular.pug
 include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sGetTours/_sGetTours.pug
 
 block variables
 	- let  mainPage= 'haeder-with-bg' 
@@ -28,8 +29,9 @@ block pagecontent
 		+page-head('', 'Туры по России')
 		+headerBlock3()
 		+sMostPopular
+		+sGetTours
 		+sWhy
-		+sForm.pb-0 
+		+sForm('Хотите сэкономить на отдыхе?', '', 'Оставьте заявку и наши менеджеры подскажут вам, как сделать ваш отдых ещё дешевле!').pb-0 
 		+sForm2(true, true, false)
 	+parts('footer')
       

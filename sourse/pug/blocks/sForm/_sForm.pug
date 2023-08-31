@@ -1,4 +1,4 @@
-mixin sForm(title='Поймай лучшее предложение', picture2)
+mixin sForm(title='Поймай лучшее предложение', picture2, text='Оставьте номер телефона. Менеджер перезвонит вам, проконсультирует и&nbsp;предложит самое выгодное предложение')
 	// start sForm
 	+b.SECTION.sForm.section&attributes(attributes)
 		.container
@@ -13,7 +13,7 @@ mixin sForm(title='Поймай лучшее предложение', picture2)
 						img(src="img/sForm-bg-1-sm.png", alt="").bg
 				+b.section-title
 					h2!=title
-					p Оставьте номер телефона. Менеджер перезвонит вам, проконсультирует и&nbsp;предложит самое выгодное предложение
+					p!= text
 				+form-wrap
 					+e.row
 						.row

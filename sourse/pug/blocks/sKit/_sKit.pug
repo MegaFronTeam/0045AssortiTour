@@ -10,10 +10,11 @@ mixin sKit(data)
 					+e.item
 						img(src=`img/svg/${img}` alt='')
 						p!= text
-			+e.row.row
-				+item('sKit-icon-1.svg', 'Оформление<br>авиабилетов')
-				+item('sKit-icon-2.svg', 'Оформление<br>виз')
-				+item('sKit-icon-3.svg', 'Подбор<br>туров')
-				+item('sKit-icon-4.svg', 'Организация<br>трансферов')
-				+item('sKit-icon-5.svg', 'Бронирование<br>экскурсий')
+			+e.row
+				.row
+					+item('sKit-icon-1.svg', 'Оформление<br>авиабилетов')
+					+item('sKit-icon-2.svg', 'Оформление<br>виз')
+					+item('sKit-icon-3.svg', 'Подбор<br>туров')
+					+item('sKit-icon-4.svg', 'Организация<br>трансферов')
+					+item('sKit-icon-5.svg', 'Бронирование<br>экскурсий')
 	// end sKit

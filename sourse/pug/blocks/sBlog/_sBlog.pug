@@ -1,7 +1,7 @@
 mixin sBlog(btn)
 	// start sBlog
 	+b.SECTION.sBlog.section&attributes(attributes)
-		mixin card(img, title, date, text, tags=['Лучшие отели'])
+		mixin card(img, title, date, text, tags=['Лучшие отели'], horrizontal)
 			+e.card(href='#')&attributes(attributes)
 				+e.img-wrap: .img-wrap-center: +img(`img/${img}`, 'bg')
 				+e.content 
@@ -9,7 +9,10 @@ mixin sBlog(btn)
 						each tag in tags
 							.col-auto
 								+e.tag!= tag
-					h6!= title
+					if horrizontal
+						h4!= title
+					else
+						h6!= title
 					if text
 						p!= text
 					+e.date!= date

@@ -11,10 +11,15 @@
 		border-radius: rem(16);
 	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: #{rem(39)};
-
-		justify-content: center;
+		max-width: rem(1222);
+		margin-left: auto;
+		margin-right: auto;
+		.row {
+			// --bs-gutter-x: #{rem()};
+			--bs-gutter-y: #{rem(39)};
+	
+			justify-content: center;
+		}
 	}
 	&__item{
 		text-align: center;

@@ -17,6 +17,7 @@
 			display: flex;
 			align-items: center;
 			margin-bottom: rem(34.600);
+			overflow: visible;
 		}
 		&__btn {
 			@include mt;

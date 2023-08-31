@@ -21,9 +21,15 @@
 	&__item {
 		img {
 			margin-bottom: rem(16);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(25);
+			}
 		}
 		h4 {
 			margin-bottom: rem(16);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(21.400);
+			}
 		}
 		p {
 			font-size: rem(14);

@@ -125,7 +125,7 @@
 		padding-bottom: rem(48);
 		// border-bottom: 1px solid $gray-100;
 		@include media-breakpoint-up(md) {
-			margin-bottom: rem(47);
+			margin-bottom: rem(20);
 		}
 		&:after {
 			content: '';
