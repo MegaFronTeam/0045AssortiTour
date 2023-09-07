@@ -3,7 +3,10 @@ mixin footer()
 		.container
 			+e.row.row
 				.col-md-3.col-xl-4
-					+e.logo(href='/'): +img('img/logo.png')
+					+e.logo(href='/'): +logo
+					//- +e.logo(href='/'): +img('img/logo.png')
+					+e.year © 
+						span
 					+e.name ООО &laquo;АССОРТИ ТУР&raquo;<br>Действующий член реестра турагентств (реестровый &#8470;&nbsp;7704752289)
 					+soc().d-lg-none
 						+item-sos('vk')
@@ -45,3 +48,8 @@ mixin footer()
 					+e.text Внимание! Все материалы и&nbsp;цены, размещенные на&nbsp;сайте, носят справочный характер и&nbsp;не&nbsp;являются публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федераци
 				.col-lg-4.ms-auto
 					+e.text * деятельность организации Meta Platforms Inc, ее&nbsp;продуктов<br>Instagram и&nbsp;Facebook запрещена в&nbsp;Российской Федерации
+				.col-12
+					+e.production
+						| за сайт 
+						+img('img/svg/prod-logo.svg')  
+						a(href="#" target="_blank") PERA.global

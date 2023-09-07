@@ -48,6 +48,7 @@
 		min-height: rem(296);
 		border-radius: 16px;
 		overflow: hidden;
+		cursor: pointer;
 		@include media-breakpoint-up(md) {
 			width: calc(100% / 2 - rem(40));
 		}

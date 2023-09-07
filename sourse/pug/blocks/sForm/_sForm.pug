@@ -45,7 +45,7 @@ mixin sForm2(contacts=true, map=true, form=true)
 								.col-lg-4
 									+input("Введите",'text', 'Ваше имя')
 								.col-lg-4
-									+input("Введите",'tel', 'Номер телефона')
+									+input("Введите",'tel', 'Номер телефона', 'tel', 'tel', true)(required)
 								.col-lg-4
 									+input("Введите",'email', 'Ваш e-mail')
 								.col-12
@@ -116,6 +116,7 @@ mixin sForm2(contacts=true, map=true, form=true)
 							});
 							myMap.geoObjects
 								.add(myPlacemark)
+								.add(myPlacemark2)
 							myMap.behaviors.disable('scrollZoom');
 							if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 								// ... отключаем перетаскивание карты

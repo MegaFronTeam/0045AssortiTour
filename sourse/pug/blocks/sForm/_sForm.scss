@@ -10,7 +10,7 @@
 	&__wrap {
 		position: relative;
 		padding: rem(24);
-		border-radius: 16px;
+		border-radius: 0;
 		background-color: $primary;
 		z-index: 1;
 		@include media-breakpoint-up(lg) {
@@ -120,7 +120,7 @@
 				}
 			}
 			&__map {
-				border-radius: 16px;
+				border-radius: 0;
 				height: rem(400);
 				width: 100%;
 				position: relative;

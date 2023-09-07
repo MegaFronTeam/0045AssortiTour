@@ -7,6 +7,10 @@
 		--sPT: #{rem(20)};
 		--sPB: #{rem(83)};
 	}
+	&__logo {
+		width: 100%;
+		max-width: rem(160);
+	}
 	&__row{
 		--bs-gutter-x: #{rem(24)};
 		// --bs-gutter-y: var(--bs-gutter-x);
@@ -98,6 +102,25 @@
 		.icon {
 			font-size: rem(24);
 		}
+	}
+	&__production {
+		margin-top: rem(8);
+		font-size: rem(12);
+		img {
+			margin-right: rem(6);
+		}
+		a {
+			opacity: 1;
+			color: $secondary;
+			text-decoration: underline;
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+	&__year {
+		font-size: rem(14);
+		margin-bottom: rem(6);
 	}
 // 
 @include media-breakpoint-up(xl) {}

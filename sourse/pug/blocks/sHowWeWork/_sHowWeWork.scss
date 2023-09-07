@@ -48,6 +48,28 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include media-breakpoint-up(lg) {
+			&:nth-child(5) {
+				.sHowWeWork__icon-wrap:before {
+					content: '8';
+				}
+			}
+			&:nth-child(6) {
+				.sHowWeWork__icon-wrap:before {
+					content: '7';
+				}
+			}
+			&:nth-child(7) {
+				.sHowWeWork__icon-wrap:before {
+					content: '6';
+				}
+			}
+			&:nth-child(8) {
+				.sHowWeWork__icon-wrap:before {
+					content: '5';
+				}
+			}
+		}
 		@include media-breakpoint-down(lg) {
 			width: auto;
 			margin-right: rem(32);

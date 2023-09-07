@@ -5,7 +5,7 @@
 	// --sTPB: #{rem()};
 	background-color: #F9F9F9;
 	@include media-breakpoint-up(md) {
-		--sPT: #{rem(80)};
+		--sPT: #{rem(40)};
 		--sPB: #{rem(80)};
 		--sTPB: #{rem(80)};
 		border-radius: rem(16);
