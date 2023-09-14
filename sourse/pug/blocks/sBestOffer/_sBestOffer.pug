@@ -5,21 +5,21 @@ mixin sBestOffer(data)
 			+b.section-title.text-center
 				h2 Лучшие предложения по направлениям
 				p Более 250 направлений по всему миру
-			//- +e.slider.default-slider-js.swiper
-			//- 	.swiper-wrapper
-			//- 		mixin slide(img, span, text, price)
-			//- 			+e.slide(href='#').bg-wrap.swiper-slide
-			//- 				+img(`img/${img}`, 'bg').picture-bg
-			//- 				p
-			//- 					span!= span 
-			//- 					<br>
-			//- 					!=text
-			//- 				+e.price!= price
-			//- 		+slide('sBestOffer-bg-1.jpg', 'Россия', 'из Москвы', '12 580 р.')
-			//- 		+slide('sBestOffer-bg-2.jpg', 'Абхазия', 'из Москвы', '12 580 р.')
-			//- 		+slide('sBestOffer-bg-3.jpg', 'Египет', 'из Москвы', '12 580 р.')
-			//- 		+slide('sBestOffer-bg-4.jpg', 'Турция', 'из Москвы', '12 580 р.')
-			//- 		+slide('sBestOffer-bg-5.jpg', 'Сиде', 'из Москвы', '12 580 р.')
-			.tv-min-price.tv-moduleid-9963812.mb-4
+			+e.slider.default-slider-js.swiper
+				.swiper-wrapper
+					mixin slide(img, span, text, price)
+						+e.slide(href='#').bg-wrap.swiper-slide
+							+img(`img/${img}`, 'bg').picture-bg
+							p
+								span!= span 
+								<br>
+								!=text
+							+e.price!= price
+					+slide('sBestOffer-bg-1.jpg', 'Россия', 'из Москвы', '12 580 р.')
+					+slide('sBestOffer-bg-2.jpg', 'Абхазия', 'из Москвы', '12 580 р.')
+					+slide('sBestOffer-bg-3.jpg', 'Египет', 'из Москвы', '12 580 р.')
+					+slide('sBestOffer-bg-4.jpg', 'Турция', 'из Москвы', '12 580 р.')
+					+slide('sBestOffer-bg-5.jpg', 'Сиде', 'из Москвы', '12 580 р.')
+			//- .tv-min-price.tv-moduleid-9963812.mb-4
 			//- +e.btn.btn.btn-outline-secondary(href='#') Показать еще
 	// end sBestOffer
