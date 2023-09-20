@@ -103,9 +103,9 @@
 				padding: rem(24);
 				z-index: 1;
 				overflow: hidden;
+				border-radius: 16px 16px 0 0;
 				@include media-breakpoint-up(lg) {
 					padding: rem(64);
-					border-radius: 16px 16px 0 0;
 				}
 				.bg-img {
 					position: absolute;
@@ -125,8 +125,8 @@
 				width: 100%;
 				position: relative;
 				overflow: hidden;
+				border-radius: 0 0 16px 16px;
 				@include media-breakpoint-up(lg) {
-					border-radius: 0 0 16px 16px;
 				}
 				& > * {
 					position: absolute;

@@ -22,6 +22,11 @@
 						wrap.insertAdjacentHTML('afterend', text);
 						wrap.previousElementSibling.remove()
 						wrap.remove();
+						let currentYear = document.querySelector('.footer__year span');
+						if (currentYear) {
+							let now = new Date();
+							currentYear.innerText = now.getFullYear();
+						}
 					});
 			}
 		</script>
@@ -311,17 +316,17 @@
 								
 								function init () {
 									myMap = new ymaps.Map('map', {
-										center:[55.75455492148348,37.604201925903304],
-										zoom: 14
+										center:[55.76304107571859,37.54544478081078],
+										zoom: 11
 									}),
-									myPlacemark = new ymaps.Placemark([55.75451861893286,37.61134733071897], {
+									myPlacemark = new ymaps.Placemark([55.75109392574745,37.60689486375426], {
 									}, {
 										iconLayout: 'default#image',
 										iconImageHref: 'img/map-pin.png',
 										iconImageSize: [70, 76],
 										iconImageOffset: [-35, -38],
 									});
-									myPlacemark2 = new ymaps.Placemark([55.753677600345135,37.599030626922605], {
+									myPlacemark2 = new ymaps.Placemark([55.78399759893183,37.46889152645872], {
 									}, {
 										iconLayout: 'default#image',
 										iconImageHref: 'img/map-pin.png',

@@ -17,6 +17,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
 }
+.icon-box {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
+}
 .icon-check {
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

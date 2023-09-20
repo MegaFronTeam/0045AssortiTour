@@ -261,7 +261,9 @@ class JSCCommon {
 	static getCurrentYear(el) {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
+		if (currentYear) {
+			currentYear.innerText = now.getFullYear()
+		};
 	}
 
 	static makeDDGroup() {
@@ -367,7 +369,7 @@ class JSCCommon {
 		this.makeDDGroup();
 		this.disabledBtn();
 		this.setScreen();
-		this.getCurrentYear('.footer__year span');
+		// this.getCurrentYear('.footer__year span');
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 
