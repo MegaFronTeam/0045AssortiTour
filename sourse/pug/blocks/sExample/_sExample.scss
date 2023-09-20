@@ -8,8 +8,8 @@
 	}
 	&__slider {
 		overflow: visible;
-		margin-right: rem(-24);
 		@include media-breakpoint-up(sm) {
+			margin-right: rem(-24);
 		}
 	}
 	&__slide {
