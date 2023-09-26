@@ -72,10 +72,13 @@
 		// min-height: rem(340);
 		h1 {
 			margin-bottom: rem(26);
-			line-height: 0.875;
+			line-height: 1;
 			@include media-breakpoint-up(md) {
 				@include rfs(72px);
 				margin-bottom: rem(40);
+				br {
+					display: none;
+				}
 			}
 		}
 		.form-wrap {
@@ -97,9 +100,11 @@
 				text-align: center;
 				color: #fff;
 				margin-bottom: rem(16);
+				font-size: rem(24);
 			}
 			&__btn {
 				--bs-btn-padding-x: #{rem(23)};
+				--bs-btn-padding-y: #{rem(20)};
 				height: 100%;
 				width: 100%;
 			}

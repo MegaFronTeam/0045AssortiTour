@@ -17,14 +17,14 @@ mixin headerBlock2()
 		+e.img-wrap
 			+img('img/sHeaderblock-bg-2.jpg', 'bg').picture-bg
 		.container
-			h1 Свадебные туры
+			h1 Свадебные <br> туры
 			+form-wrap
-				h4 Оставьте свой номер телефона для консультации и подбора
+				h4 Оставьте свой номер&nbsp;телефона для консультации и подбора
 				.row
 					.col-lg
 						+input('Введите', 'text', 'Ваше имя')
 					.col-lg
-						+input('Введите', 'text', 'Номер телефона')
+						+input('Введите', 'tel', 'Номер телефона')
 					.col-lg-auto
 						+e.btn.btn.btn-primary(type='submit') Отправить
 					.col-12
