@@ -12,6 +12,7 @@
 		color: $gray-600;
 		line-height: 0.875;
 		font-family: $font-family-monospace;
+		z-index: 10;
 	}	
 	&__input {
 		// @extend .form-control;

@@ -23,7 +23,7 @@
 			letter-spacing: -0.23px;
 		}
 	}
-	&__addition {
+	&__addition, blockquote {
 		color: $secondary;
 		font-weight: 700;
 		line-height: 1.2;
@@ -32,10 +32,50 @@
 		border-top: 1px solid $gray-100;
 		border-bottom: 1px solid $gray-100;
 		margin-bottom: rem(40);
+		p {
+			line-height: 1.2;
+			color: $secondary;
+			margin-bottom: 0;
+			letter-spacing: normal;
+		}
 	}
 	&__tag-wrap {
 		h4 {
 			margin-bottom: rem(40);
+		}
+		// ul {
+		// 	@include roww('8px', '8px', m);
+		// 	list-style-type: none;
+		// 	margin-bottom: 0;
+		// 	display: flex;
+		// 	flex-wrap: wrap;
+		// 	max-width: rem(818);
+		// 	li {
+		// 		background-color: rgba(0,0,0,.03);
+		// 		border-radius: rem(4);
+		// 		color: #5b5b5b;
+		// 		font-size: rem(16);
+		// 		font-weight: 600;
+		// 		line-height: 1.4;
+		// 		padding: rem(5) rem(7);
+		// 	}
+		// }
+	}
+	ul {
+		@include roww('8px', '8px', m);
+		list-style-type: none;
+		margin-bottom: 0;
+		display: flex;
+		flex-wrap: wrap;
+		max-width: rem(818);
+		li {
+			background-color: rgba(0,0,0,.03);
+			border-radius: rem(4);
+			color: #5b5b5b;
+			font-size: rem(16);
+			font-weight: 600;
+			line-height: 1.4;
+			padding: rem(5) rem(7);
 		}
 	}
 	&__important {
