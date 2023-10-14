@@ -12,8 +12,9 @@ mixin sAboutUs(data)
 					p С&nbsp;другой стороны, новая модель организационной деятельности прекрасно подходит для реализации дальнейших направлений развития.
 				.col-lg-5
 					+e.img-wrap
-						+img('img/sAboutUs-img-1.png')(data-fancybox='sertificates' data-src='img/sAboutUs-img-1-lg.png').res-i
-						div(data-fancybox='sertificates' data-src='img/sAboutUs-img-2-lg.png')
+						+img('https://assorti-tours.ru/wp-content/uploads/2023/10/20230421-img_5377.jpg')(data-fancybox='sertificates' data-src='https://assorti-tours.ru/wp-content/uploads/2023/10/20230421-img_5377.jpg').img-1
+						+img('https://assorti-tours.ru/wp-content/uploads/2023/10/20230421-img_5375.jpg')(data-fancybox='sertificates' data-src='https://assorti-tours.ru/wp-content/uploads/2023/10/20230421-img_5375.jpg').img-2
+						//- div(data-fancybox='sertificates' data-src='img/sAboutUs-img-2-lg.png')
 			+e.bottom-row.row
 				mixin item(img, text)
 					.col-6.col-lg-3
